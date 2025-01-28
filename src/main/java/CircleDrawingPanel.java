@@ -2,11 +2,18 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-
+/**
+ * @author Jose Guevara Goldini
+ * 
+ * Esta clase es un JPanel de la instancia principal
+ */
 public class CircleDrawingPanel extends JPanel {
 
     private final CircleManager circleManager;
-
+/**
+ * Constructor del panel
+ * 
+ */
     public CircleDrawingPanel() {
         // Configurar les dimensions i el color de fons del panell
         setPreferredSize(new Dimension(600, 400));
@@ -17,6 +24,9 @@ public class CircleDrawingPanel extends JPanel {
 
         // TODO: Afegir un MouseListener per gestionar els clics del ratolí i afegir cercles
         addMouseListener(new MouseAdapter() {
+/**
+ * Evento en el que se recogen las coordenadas
+ */
             @Override
             public void mouseClicked(MouseEvent e) {
                 // TODO: Afegir un cercle al gestor amb les coordenades del clic
@@ -38,7 +48,10 @@ public class CircleDrawingPanel extends JPanel {
         });
         timer.start();
     }
-
+/**
+ * Dibuja un circulo y lo rellena de un color
+ * @param g 
+ */
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
@@ -53,7 +66,9 @@ public class CircleDrawingPanel extends JPanel {
             g2d.fillOval(circle.getX() - 15, circle.getY() - 15, 30, 30);
         }
     }
-    
+/**
+ * Función auxiliar que llama al circleManager para borrar los circulos y repintar el panel
+ */    
 
     // Esborrar tots els cercles i actualitzar el panell
     public void clearCircles() {
