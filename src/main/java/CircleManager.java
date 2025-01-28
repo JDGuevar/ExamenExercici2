@@ -17,7 +17,7 @@ public class CircleManager {
     private static final long CIRCLE_LIFETIME = 5000; // 5 seconds
 
     /**
-     *
+     * recoge las coodrenadas y añade un nuevo circulo de color aleatorio al array
      * @param x
      * @param y
      */
@@ -35,7 +35,7 @@ public class CircleManager {
     }
 
     /**
-     *
+     *revisa qué circulos han acabado su tiempo y notifica la función de eliminación
      */
     public void checkAndRemoveExpiredCircles() {
         boolean removed = false;
@@ -52,7 +52,7 @@ public class CircleManager {
     }
 
     /**
-     *
+     * elimina los circulos del array y notifica la función de eliminacion
      */
     public void clearAllCircles() {
         circles.clear();
