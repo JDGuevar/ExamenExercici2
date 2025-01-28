@@ -1,9 +1,16 @@
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ *
+ * @author Alumne
+ */
 public class MainFrame extends JFrame {
     private CircleDrawingPanel drawingPanel;
 
+    /**
+     *
+     */
     public MainFrame() {
         // Configurar el marc principal
         setTitle("Exercici 2: Dibuixar cercles");
@@ -36,6 +43,10 @@ public class MainFrame extends JFrame {
         setLocationRelativeTo(null);
     }
 
+    /**
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
             MainFrame frame = new MainFrame();
